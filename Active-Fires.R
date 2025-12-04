@@ -35,7 +35,7 @@ get_Iran_hex <- function(Iran_sf) {
   
   Iran_hex <- st_make_grid(
     Iran_transformed,
-    cellsize = 20000,    # ← ← ←  افزایش اندازه هگزها (دو برابر)
+    cellsize = 20000,  
     what = "polygons",
     square = FALSE
   ) %>%
@@ -134,7 +134,7 @@ df <- get_intervals(fire_Iran_sf)
 
 
 # -----------------------------------------------------------
-# 7. MAP FUNCTION (Times New Roman + Bigger style)
+# 7. MAP FUNCTION
 # -----------------------------------------------------------
 
 get_Iran_map <- function(df) {
@@ -206,3 +206,4 @@ Iran_anim <- gganimate::animate(
 )
 
 anim_save("Terra.gif", Iran_anim)
+
